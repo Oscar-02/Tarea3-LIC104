@@ -1,0 +1,142 @@
+body{
+
+}
+
+.header-container{
+    width: 100%;
+    padding: 20px;
+    flex-wrap: nowrap;
+    background-color: indianred;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.name{
+    color: white;
+    width: 30%;
+    font-size: 20px;
+    padding: 5px;
+}
+
+.menu{
+    display: flex;
+    gap: 1em;
+    font-size: 18px;
+}
+
+.menu li{
+    list-style: none;
+    padding: 5px 20px;
+    margin: 0px 5px;
+}
+
+.menu li:hover{
+    background-color: darkkhaki;
+    color: black;
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+.menu a{
+    text-decoration: none;
+    color: white;
+}
+
+input[type=checkbox]{
+    display: none;
+}
+
+.hamburger{
+    display: none;
+    font-size: 24px;
+    user-select: none;
+}
+
+/* Para moviles */
+@media screen and (max-device-width: 768px) {
+    .header-container{
+        height: 70px;
+    }
+
+    .name{
+        font-size: 1rem;
+    }
+
+    .menu { 
+        display:none;
+        position: absolute;
+        background-color:teal;
+        right: 0;
+        left: 0;
+        text-align: center;
+        padding: 16px 0px;
+        margin: 12px 0 0 0;
+    }
+
+    .menu li{
+        margin: 10px;
+    }
+    
+    .menu li:hover {
+        display: inline-block;
+        background-color:#4c9e9e;
+        transition: 0.3s ease;
+    }
+    
+    input[type=checkbox]:checked ~ .menu{
+        display: block;
+    }
+    
+    .hamburger {
+        display: block;
+    }
+    
+}
+
+/* Para Tablets */
+@media screen and (min-device-width: 769px) and (max-device-width: 1024px) {
+    .header-container{
+        height: 85px;
+    }
+
+    .name{
+        font-size: 1.5rem;
+    }
+
+    .menu { 
+        display:none;
+        position: absolute;
+        background-color:teal;
+        right: 0;
+        left: 0;
+        text-align: center;
+        padding: 16px 0px;
+    }
+    
+    .menu li:hover {
+        display: inline-block;
+        background-color:#4c9e9e;
+        transition: 0.3s ease;
+    }
+    
+    input[type=checkbox]:checked ~ .menu{
+        display: block;
+    }
+    
+    .hamburger {
+        display: block;
+    }
+}
+
+/*Para PC*/
+@media screen and (min-device-width: 1025px){
+    .header-container{
+        height: 100px;
+    }
+
+    .name{
+        font-size: 2rem;
+    }
+}
