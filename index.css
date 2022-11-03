@@ -1,11 +1,365 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&display=swap');
+
+/*#region Finished*/
+
 body{
+}
+
+.emoji{
+    font-family: 'Noto Color Emoji';
 }
 
 .header{
     width: 100%;
-    max-height: 1000px;
+    overflow: hidden;
+    position: relative;
+    background-color: black;
 }
 
-.header iframe{
+.h-bg{
     width: 100%;
+    position: absolute;
+    opacity: 70%;
+}
+
+.h-content{
+    padding: 1em;
+    position: relative;
+    color: white;
+}
+
+.converter{
+    padding: 20px;
+    background-color: lightskyblue;
+    display: flex;
+}
+
+.icon{
+    filter: invert(35%);
+}
+
+.howto{
+    margin: 20px 0;
+    width: 100%;
+}
+
+.howto-title{
+    font-weight: bold;
+    text-align: center;
+    text-overflow: clip;
+}
+/*#endregion*/
+
+.start{
+    margin: 10px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#convertNow {
+    border: none;
+    background: none;
+    background-color: lightskyblue;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 15px 15px 20px 0px rgba(0,0,0,0.57);
+}
+
+@media screen and (max-width: 768px) {
+    /* #region Mobile Finished*/
+    .h-content{
+        font-size: 2rem;
+        text-align: start;
+    }
+
+    .converter{
+        display: flex;
+        margin: 0;
+        border-radius: 0px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .value{
+        width: 100%;
+        background-color: white;
+        padding: 10px 20px;
+        margin: 5px 0 20px 0;
+        border-radius: 10px;
+        box-shadow: 15px 15px 20px 0px rgba(0,0,0,0.47);
+        -webkit-box-shadow: 15px 15px 20px 0px rgba(0,0,0,0.47);
+        text-align: center;
+    }
+
+    .flag{
+        font-size: 24px;
+    }
+
+    .currency{
+        font-size: 24px;
+        font-weight: bold;
+        margin: 0 5px;
+    }
+
+    .currencyname{
+        font-size: 18px;
+        margin: 0 5px;
+    }
+
+    .icon{
+        width: 2.5em;
+    }
+
+    .howto-title{
+        font-size: 30px;
+    }
+
+    .howto-content{
+        width: 100%;
+        padding: 20px;
+    }
+
+    .howto-section{
+        display: flex;
+        flex-direction: column;
+        margin: 15px 0;
+        display: grid;
+        grid-template-rows: auto auto;
+        text-align: center;
+    }
+
+    .howto-subtitle{
+        font-size: 21px;
+        font-weight: bold;
+    }
+
+    .howto-para{
+        margin: 10px 0;
+        font-size: 20px;
+    }
+
+    .howto-img{
+        max-height: 200px;
+        object-fit: cover;
+        width: 100%;
+        border-radius: 12px;
+    }
+
+    .howto-left{
+        
+    }
+
+    .howto-right{
+
+    }
+    /* #endregion*/
+
+
+}
+
+@media screen and (min-width: 769px) and (max-width: 1023px) {
+    /* #region Tablet Finished*/
+    .h-content{
+        font-size: 2.5rem;
+        text-align: start;
+    }
+
+    .converter{
+        display: grid;
+        grid-template-columns: 45% 10% 45%;
+        margin: 20px;
+        border: 2.5px solid darkblue;
+        border-radius: 12px;
+
+    }
+
+    .value{
+        background-color: white;
+        padding: 10px 20px;
+        margin: 10px;
+        border-radius: 10px;
+        box-shadow: 15px 15px 20px 0px rgba(0,0,0,0.47);
+        -webkit-box-shadow: 15px 15px 20px 0px rgba(0,0,0,0.47);
+    }
+
+    .flag{
+        font-size: 30px;
+    }
+
+    .currency{
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    .currencyname{
+        display: block;
+        font-size: 20px;
+    }
+
+    .converticon{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .icon{
+        width: 85%;
+    }
+
+    .howto-title{
+        font-size: 40px;
+    }
+
+    .howto-content{
+        width: 100%;
+    }
+
+    .howto-section{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        margin: 10px 0;
+    }
+
+    .howto-subtitle{
+        font-size: 26px;
+        font-weight: bold;
+    }
+
+    .howto-para{
+        margin: 10px 0;
+        font-size: 16px;
+    }
+
+    .howto-img{
+        max-height: 100%;
+        object-fit: cover;
+        width: 100%;
+        border-radius: 12px;
+    }
+
+    .howto-left{
+        height: 200px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .howto-right{
+        height: 200px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: end;
+    }
+    /* #endregion*/ 
+
+
+}
+
+@media screen and (min-width: 1024px) {
+    /* #region Desktop Finished */
+    .h-content{
+        font-size: 4rem;
+        text-align: center;
+    }
+
+    .converter{
+        display: grid;
+        grid-template-columns: 45% 10% 45%;
+        margin: 20px;
+        border: 2.5px solid darkblue;
+        border-radius: 12px;
+    }
+
+    .value{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        background-color: white;
+        padding: 10px 20px;
+        margin: 10px;
+        border-radius: 10px;
+        box-shadow: 15px 15px 20px 0px rgba(0,0,0,0.47);
+        -webkit-box-shadow: 15px 15px 20px 0px rgba(0,0,0,0.47);
+    }
+
+    .flag{
+        font-size: 26px;
+    }
+
+    .currency{
+        font-size: 26px;
+        font-weight: bold;
+        margin: 0 10px;
+    }
+
+    .currencyname{
+        font-size: 20px;
+    }
+
+    .converticon{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .icon{
+        width: 45%;
+    }
+
+    .howto-title{
+        font-size: 36px;
+    }
+
+    .howto-content{
+        width: 100%;
+    }
+
+    .howto-section{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        margin: 10px 0;
+    }
+
+    .howto-subtitle{
+        font-size: 26px;
+        font-weight: bold;
+    }
+
+    .howto-para{
+        margin: 10px 0;
+        font-size: 18px;
+    }
+
+    .howto-img{
+        max-height: 100%;
+        object-fit: cover;
+        width: 100%;
+        border-radius: 12px;
+    }
+
+    .howto-left{
+        height: 200px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .howto-right{
+        height: 200px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: end;
+    }
+    /* #endregion*/
+
+
 }

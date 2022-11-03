@@ -3,22 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="assets/contentLoader.js"></script>
+    <script defer src="index.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="sub-pages/style.css">
+    <title>Conversor de divisas</title>
     <!--USAR PARA AÑADIR HEADER-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script>
+    <script async>
         $(function(){
       $("#includedContent").load("sub-pages/header/header.html");
     });
     </script>
-    <link rel="stylesheet" href="sub-pages/header/header.css">
     <!--HEADER END-->
-    <script src="index.js"></script>
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="sub-pages/style.css">
-    <title>Conversor de divisas</title>
 </head>
 <body>
     <div id="includedContent"></div>
-    
+    <div class="header">
+        <img src="https://wallpaper.dog/large/267229.jpg" alt="" class="h-bg">
+        <div class="h-content">
+            Conversor de Divisas
+        </div>
+    </div>
+    <div class="converter">
+        <div class="value">
+            <span class="flag emoji" id="flag1">&#x1f1e6;&#x1f1e8;</span>
+            <span class="currency" id="currency1">ACD</span>
+            <span class="currencyname" id="currencyName1">Admirable Currency Data</span>
+        </div>
+        <div class="converticon">
+            <img class="icon" alt="" src="http://cdn.onlinewebfonts.com/svg/img_233156.png">
+        </div>
+        <div class="value">
+            <span class="flag emoji" id="flag2">&#x1f1f8;&#x1f1fb;</span>
+            <span class="currency" id="currency2">BCD</span>
+            <span class="currencyname" id="currencyName2">Boosted Currency Data</span>
+        </div>
+    </div>
+    <div class="howto">
+        <div class="howto-title">¿Que te permite hacer?</div>
+        <div class="howto-content">
+            <div class="howto-section">
+                <div class="howto-left">
+                    <span class="howto-subtitle">Multiples divisas</span>
+                    <p class="howto-para">Te permite elegir entre un total de 159 diferentes tipos de divisas para
+                        ser convertidas entre ellas.</p>
+                </div>
+                <div class="howto-right">
+                    <img src="https://i.ibb.co/Jnj9R8Y/image.png" alt="" class="howto-img">
+                </div>
+            </div>
+            <hr style="border: 5px solid gray; border-radius: 5px; margin: 0 20px; color: gray;">
+            <div class="howto-section">
+                <div class="howto-left">
+                    <img src="http://miracomohacerlo.com/wp-content/uploads/2021/02/conversor-de-divisas.jpg" alt="" class="howto-img">
+                </div>
+                <div class="howto-right">
+                    <span class="howto-subtitle">Sencillez</span>
+                    <p class="howto-para">Para poder convertir primero debes elegir la divisa de origen
+                        ya sea buscando su nombre o su simbolo representativo. Luego, de la misma manera
+                        debes elegir la de destino y luego llenar los campos de cada divisa. Una vez
+                        finalizado el resultado se te mostrara automaticamente
+                    </p>
+                </div>
+            </div>
+            <hr style="border: 5px solid gray; border-radius: 5px; margin: 0 20px;">
+            <div class="howto-section">
+                <div class="howto-left">
+                    <span class="howto-subtitle">Respuesta rapida</span>
+                    <p class="howto-para">Recibes el resultado de tu consulta en el momento,
+                        siempre y cuando este cumpla con los requisitos como la no admision de
+                        numeros negativos, valores numericos, etc.
+                    </p>
+                </div>
+                <div class="howto-right">
+                    <img src="https://www.keycdn.com/img/support/server-response-time.png" alt="" class="howto-img">
+                </div>
+            </div>
+            <div class="start">
+                <button type="submit" id="convertNow">Convertir ahora &#x25ba;</button>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
