@@ -3,11 +3,13 @@ var urlConvert = "https://api.exchangerate.host/convert?from=USD&to=EUR";
 var available = new Array();
 //[codigo, descripcion]
 
-fetch(urlGetCurrency)
-.then (response => {
-  return response.json();
-})
-.then (json => {
+var request = new XMLHttpRequest();
+request.open('GET', urlGetCurrency);
+request.responseType = 'json';
+request.send();
+
+request.onload = () => {
+  var json = request.response;
   Object.keys(json["symbols"]).forEach(function(key){
     available.push([json["symbols"][key]["code"], json["symbols"][key]["description"]]);
   })
@@ -20,8 +22,9 @@ fetch(urlGetCurrency)
         + String.fromCodePoint(`0x${emojiCode.substring(6,11)}`), element[0], element[1]])
       }
     })
-})
-})
+  })
+}
+
 
 //FUNCION CONVERTIR
 
