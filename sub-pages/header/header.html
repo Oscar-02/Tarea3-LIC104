@@ -1,179 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="index.js"></script>
     <style>
-@import url("/sub-pages/style.css");
+      @import url("/sub-pages/style.css");
 
-        body{
+      body {
+      }
 
-}
+      .header-container {
+        width: 100%;
+        padding: 20px;
+        flex-wrap: nowrap;
+        background-color: indianred;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
 
-.header-container{
-    width: 100%;
-    padding: 20px;
-    flex-wrap: nowrap;
-    background-color: indianred;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-}
+      .name {
+        color: white;
+        width: 30%;
+        font-size: 20px;
+        padding: 5px;
+      }
 
-.name{
-    color: white;
-    width: 30%;
-    font-size: 20px;
-    padding: 5px;
-}
+      .menu {
+        display: flex;
+        gap: 1em;
+        font-size: 18px;
+        z-index: 100;
+      }
 
-.menu{
-    display: flex;
-    gap: 1em;
-    font-size: 18px;
-    z-index: 100;
-}
+      .menu li {
+        list-style: none;
+        padding: 5px 20px;
+        margin: 0px 5px;
+      }
 
-.menu li{
-    list-style: none;
-    padding: 5px 20px;
-    margin: 0px 5px;
-}
-
-.menu li:hover{
-    background-color: darkkhaki;
-    color: black;
-    border-radius: 10px;
-    transition: 0.3s ease;
-}
-
-.menu a{
-    text-decoration: none;
-    color: white;
-}
-
-input[type=checkbox]{
-    display: none;
-}
-
-.hamburger{
-    display: none;
-    font-size: 24px;
-    -webkit-user-select: none;
-    user-select: none;
-}
-
-/* Para moviles */
-@media screen and (max-width: 768px) {
-    .header-container{
-        height: 70px;
-    }
-
-    .name{
-        font-size: 1rem;
-    }
-
-    .menu { 
-        display:none;
-        position: absolute;
-        background-color:teal;
-        right: 0;
-        left: 0;
-        text-align: center;
-        padding: 16px 0px;
-        margin: 12px 0 0 0;
-    }
-
-    .menu li{
-        margin: 10px;
-    }
-    
-    .menu li:hover {
-        display: inline-block;
-        background-color:#4c9e9e;
+      .menu li:hover {
+        background-color: darkkhaki;
+        color: black;
+        border-radius: 10px;
         transition: 0.3s ease;
-    }
-    
-    input[type=checkbox]:checked ~ .menu{
-        display: block;
-    }
-    
-    .hamburger {
-        display: block;
-    }
-    
-}
+      }
 
-/* Para Tablets */
-@media screen and (min-width: 769px) and (max-width: 1130px) {
-    .header-container{
-        height: 85px;
-    }
+      .menu a {
+        text-decoration: none;
+        color: white;
+      }
 
-    .name{
-        font-size: 1.5rem;
-    }
+      input[type="checkbox"] {
+        display: none;
+      }
 
-    .menu { 
-        display:none;
-        position: absolute;
-        background-color:teal;
-        right: 0;
-        left: 0;
-        text-align: center;
-        padding: 16px 0px;
-    }
-    
-    .menu li:hover {
-        display: inline-block;
-        background-color:#4c9e9e;
-        transition: 0.3s ease;
-    }
-    
-    input[type=checkbox]:checked ~ .menu{
-        display: block;
-    }
-    
-    .hamburger {
-        display: block;
-    }
-}
+      .hamburger {
+        display: none;
+        font-size: 24px;
+        -webkit-user-select: none;
+        user-select: none;
+      }
 
-/*Para PC*/
-@media screen and (min-width: 1131px){
-    .header-container{
-        height: 100px;
-    }
+      /* Para moviles */
+      @media screen and (max-width: 768px) {
+        .header-container {
+          height: 70px;
+        }
 
-    .name{
-        font-size: 2rem;
-    }
-}
+        .name {
+          font-size: 1rem;
+        }
+
+        .menu {
+          display: none;
+          position: absolute;
+          background-color: teal;
+          right: 0;
+          left: 0;
+          text-align: center;
+          padding: 16px 0px;
+          margin: 12px 0 0 0;
+        }
+
+        .menu li {
+          margin: 10px;
+        }
+
+        .menu li:hover {
+          display: inline-block;
+          background-color: #4c9e9e;
+          transition: 0.3s ease;
+        }
+
+        input[type="checkbox"]:checked ~ .menu {
+          display: block;
+        }
+
+        .hamburger {
+          display: block;
+        }
+      }
+
+      /* Para Tablets */
+      @media screen and (min-width: 769px) and (max-width: 1130px) {
+        .header-container {
+          height: 85px;
+        }
+
+        .name {
+          font-size: 1.5rem;
+        }
+
+        .menu {
+          display: none;
+          position: absolute;
+          background-color: teal;
+          right: 0;
+          left: 0;
+          text-align: center;
+          padding: 16px 0px;
+        }
+
+        .menu li:hover {
+          display: inline-block;
+          background-color: #4c9e9e;
+          transition: 0.3s ease;
+        }
+
+        input[type="checkbox"]:checked ~ .menu {
+          display: block;
+        }
+
+        .hamburger {
+          display: block;
+        }
+      }
+
+      /*Para PC*/
+      @media screen and (min-width: 1131px) {
+        .header-container {
+          height: 100px;
+        }
+
+        .name {
+          font-size: 2rem;
+        }
+      }
     </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script defer>
+      const hTitle = document.getElementById("hTitle");
+      const hHome = document.getElementById("hHome");
+      const hConvert = document.getElementById("hConvert");
+      const hAbout = document.getElementById("hAbout");
+      const hDevelopers = document.getElementById("hDevelopers");
+      const hContact = document.getElementById("hContact");
+
+      $(hTitle).attr("href", "/index.html");
+      $(hHome).attr("href", "/index.html");
+      $(hConvert).attr("href", "/sub-pages/convert/convert.html");
+      $(hAbout).attr("href", "/sub-pages/about/about.html");
+      $(hDevelopers).attr("href", "/sub-pages/developers/developers.html");
+      $(hContact).attr("href", "/sub-pages/contact/contact.html");
+    </script>
     <title>Conversor de divisas</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <div class="header-container">
-            <div class="name">
-                ❎changeConv€rter
-            </div>
-            <div class="navBar">
-                <ul class="nav-links">
-                    <input type="checkbox" id="checkbox_toggle">
-                    <label for="checkbox_toggle" class="hamburger">&#9776;</label>
-                    <div class="menu">
-                        <li><a href="../../index.html">Inicio</a></li>
-                        <li><a href="sub-pages/convert/convert.html">Convertir</a></li>
-                        <li><a href="../about/about.html">Acerca De</a></li>
-                        <li><a href="sub-pages/developers/developers.html">Desarrolladores</a></li>
-                        <li><a href="../contact/contact.html">Contacto</a></li>
-                    </div>
-                </ul>
-            </div>
+      <div class="header-container">
+        <div class="name">
+          <a style="text-decoration: none; color: white" id="hTitle"
+            >❎changeConv€rter</a
+          >
         </div>
+        <div class="navBar">
+          <ul class="nav-links">
+            <input type="checkbox" id="checkbox_toggle" />
+            <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+            <div class="menu">
+              <li><a href="" id="hHome">Inicio</a></li>
+              <li><a href="" id="hConvert">Convertir</a></li>
+              <li><a href="" id="hAbout">Acerca De</a></li>
+              <li><a href="" id="hDevelopers">Desarrolladores</a></li>
+              <li><a href="" id="hContact">Contacto</a></li>
+            </div>
+          </ul>
+        </div>
+      </div>
     </header>
-</body>
+  </body>
 </html>

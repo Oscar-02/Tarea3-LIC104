@@ -3,20 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="index.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
+    crossorigin="anonymous">
     <!--script src="../../assets/contentLoader.js"></script>
     <!--JS Y CSS-->
     <link rel="stylesheet" href="../style.css">
-    <title>Conversor de divisas</title>
+    <title>Contact</title>
     <!--USAR PARA AÑADIR HEADER-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script async>
         $(function(){
       $("#includedContent").load("../header/header.html");
+      $("#includedFooter").load("../footer/footer.html");
     });
     </script>
     <!--HEADER END-->
 </head>
-<body>
-    <div id="includedContent"></div>
+ <body class="bg-light">
+     <div id="includedContent"></div>
+      <section class="d-flex justify-content-center ">
+      <div class="card text-white bg-dark col-sm-6 p-3">
+        <div class="mb-3">
+          <h1>¡Contáctanos!</h1>
+        </div>
+          <div class="mb-2">
+              <form action = "">
+                <div class="mb-2">
+                  <label for="nombre">Nombre:</label>
+                  <input for="text" class="form-control" name="nombre" id="nombre" placeholder="Emilia"></input>
+                </div>
+                <div class="mb-2">
+                  <label for="apellido">Apellido:</label>
+                  <input for="text" class="form-control" name="apellido" id="apellido" placeholder="González"></input>
+                </div>
+                <div class="mb-2">
+                  <label for="correo">Correo:</label>
+                  <input for="text" class="form-control" name="correo" id="correo" placeholder="emiliag@mail.com"></input>
+                </div>
+                <div class="mb-2">
+                  <label for="sexo">Sexo: </label>
+                  <input type="radio" name="sexo" id="sexo" value="masculino" > Masculino
+                  <input type="radio"  name="sexo" id="sexo" value="femenino" > Femenino
+                </div>
+                <div class="mb-2">
+                  <label for="mensaje">Mensaje:</label>
+                  <textarea name="mensaje" id="mensaje" class="form-control" placeholder="¡Hola! Me gustaría saber un poco más sobre ustedes"></textarea>
+                </div>
+                <div class="mb-2">
+                  <button class="btn btn-danger">Enviar</button>
+                </div>
+              </form>
+             </div>
+            </div>
+    </section>
 </body>
+  <!--USAR PARA AÑADIR FOOTER-->
+  <div id="includedFooter"></div>
+  <!--FOOTER END-->
 </html>

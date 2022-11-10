@@ -11,8 +11,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script async>
         $(function(){
-      $("#includedContent").load("sub-pages/header/header.html");
-    });
+            $("#includedContent").load("sub-pages/header/header.html");
+        });
+        $(function() {
+            $("#footerContent").load("sub-pages/footer/footer.html");
+        });
     </script>
     <!--HEADER END-->
 </head>
@@ -55,7 +58,7 @@
             <hr style="border: 5px solid gray; border-radius: 5px; margin: 0 20px; color: gray;">
             <div class="howto-section">
                 <div class="howto-left">
-                    <img src="http://miracomohacerlo.com/wp-content/uploads/2021/02/conversor-de-divisas.jpg" alt="" class="howto-img">
+                    <img src="https://miracomohacerlo.com/wp-content/uploads/2021/02/conversor-de-divisas.jpg" alt="" class="howto-img">
                 </div>
                 <div class="howto-right">
                     <span class="howto-subtitle">Sencillez</span>
@@ -80,9 +83,15 @@
                 </div>
             </div>
             <div class="start">
-                <button type="submit" id="convertNow">Convertir ahora &#x25ba;</button>
+                <button type="submit" id="convertNow">
+                    <a href="sub-pages/convert/convert.html" 
+                    style="text-decoration: none; color: black;">Convertir ahora &#x25ba;</a>
+                </button>
             </div>
         </div>
+    </div>
+    <div id="footerContent">
+
     </div>
 </body>
 </html>
