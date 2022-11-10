@@ -3,20 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="convert.js"></script>
     <!--script src="../../assets/contentLoader.js"></script>
     <!--JS Y CSS-->
     <link rel="stylesheet" href="../style.css">
     <title>Conversor de divisas</title>
+    <link rel="stylesheet" href="convert.css">
     <!--USAR PARA AÑADIR HEADER-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/js/standalone/selectize.min.js" integrity="sha256-+C0A5Ilqmu4QcSPxrlGpaZxJ04VjsRjKu+G82kl5UJk=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/css/selectize.bootstrap3.min.css" integrity="sha256-ze/OEYGcFbPRmvCnrSeKbRTtjG4vGLHXgOqsyLFTRjg=" crossorigin="anonymous" />
     <script async>
         $(function(){
-      $("#includedContent").load("../header/header.html");
-    });
+            $("#includedContent").load("../header/header.html");
+        });
     </script>
     <!--HEADER END-->
 </head>
 <body>
     <div id="includedContent"></div>
+    <div class="content">
+        <div class="origin">
+            <fieldset>
+                <legend>Moneda de Origen</legend>
+                <div class="dropdown" id="originDropdown">
+                    <button type="button" onclick="ShowOptionsOrigin()" class="dropBtn"
+                    id="originBtn">XXX</button>
+                    <div class="dropdownMenu" id="origin">
+                        <input type="text" placeholder="Buscar..." id="originSearch"
+                        onkeyup="filtering('origin')">
+                    </div>
+                    <input type="number" class="valueSet" id="originValue" 
+                    placeholder="Numero" min="0" onkeyup="Calculate('origin')">
+                </div>
+            </fieldset>
+        </div>
+        <div class="ending">
+            <fieldset>
+                <legend>Moneda de Destino</legend>
+                <div class="dropdown" id="endingDropdown">
+                    <button class="dropBtn" id="endingBtn" type="button"
+                    onclick="ShowOptionsEnding()">XXX</button>
+                    <div class="dropdownMenu" id="ending">
+                        <input type="text" id="endingSearch" onkeyup="filtering('ending')"
+                        placeholder="Buscar ..." >
+                    </div>
+                    <input type="number" class="valueSet" id="endingValue" 
+                    placeholder="Numero" min="0" onkeyup="Calculate('ending')">
+                </div>
+            </fieldset>
+        </div>
+        <div class="options">
+            <div class="notif" id="notif">
+                <div class="notif-icon">
+                    <span id="iconType">&#x26a0;</span>
+                </div>
+                <div class="notif-text">
+                    <span id="textNotif">Advertencia. Este es el texto de la advertencia el cual debe
+                        ser largo por razones de prueba
+                    </span>
+                </div>
+            </div>
+            <div class="buttons">
+                <button class="optionBtn" onclick="clearHistory()">Borrar<br>Historial</button>
+            </div>
+        </div>
+        <div class="log">
+            <table id="logTable" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th style="width: 100px;">Valor</th>
+                        <th style="width: auto;">Conversion</th>
+                        <th style="width: 100px;">Resultado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </body>
 </html>

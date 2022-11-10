@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&display=swap');
+
+.content{
+    display: flex;
+    width: 100%;
+    margin: 5px 0;
+}
+
+.dropBtn {
+    background-color: white;
+    color: black;
+    padding: 10px;
+    font-size: 20px;
+    border: 1px solid lightsalmon;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.dropBtn:hover, .dropBtn:focus{
+    background-color: lightsalmon;
+}
+
+#originSearch, #endingSearch{
+    box-sizing: border-box;
+    font-size: 16px;
+    padding: 14px 20px 12px 45px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+}
+
+#originSearch:focus, #endingSearch:hover {
+    outline: 3px solid #ddd;
+}
+
+
+.dropdown{
+    position: relative;
+    display: inline-block;
+}
+
+.dropdownMenu{
+    display: none;
+    position: relative;
+    background-color: #f6f6f6;
+    min-width: 230px;
+    border: 1px solid #ddd;
+    z-index: 1;
+}
+
+.dropdownMenu span{
+    color: black;
+    padding: 12px 16px;
+    display: block;
+}
+
+.dropdownMenu div:hover{
+    background-color: #f1f1f1;
+}
+
+.valueSet{
+    font-size: 20px;
+    padding: 9px;
+    border: 1px solid lightseagreen;
+    border-radius: 5px;
+}
+
+.buttons{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.optionBtn{
+    height: 50px;
+    padding: 0 10px;
+    margin: 5px;
+    background-color: greenyellow;
+    border: 1px solid darkslategray;
+    border-radius: 10px;
+}
+.optionBtn:hover{
+    background-color: darkgreen;
+    color: white;
+}
+
+.notif{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 7px;
+    background-color: rgb(196, 53, 53);
+    border: 1px solid black;
+    border-radius: 5px;
+    align-items: center;
+    visibility: hidden;
+    color: rgb(255, 213, 213);
+}
+
+.notif-icon{
+    margin: 0 5px 0 0;
+    font-size: 30px;
+    color: rgb(255, 213, 213);
+}
+
+
+
+.log{
+    width: 100%;
+    padding: 10px;
+}
+
+#logTable{
+    width: 100%;
+}
+
+#logTable thead{
+    text-align: center;
+    background-color: #2e2e2e;
+    color: white;
+}
+
+#logTable tbody tr{
+    padding: 10px 12.5px;
+    background-color: white;
+    text-align: center;
+}
+
+#logTable tbody tr:nth-last-of-type(even){
+    background-color: #d4d4d4;
+}
+
+@media screen and (max-width: 767px) {
+    .content{
+        flex-direction: column;
+    }
+    .origin, .ending, .options{
+        margin: 10px;
+    }
+    .options{
+        display: grid;
+        grid-template-columns: 60% 40%;
+        border: 1px solid gray;
+        padding: 5px 10px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px){
+    .content{
+        display: flex;
+        flex: 1 0 50%;
+        flex-wrap: wrap;
+        justify-content: center;
+
+    }
+    .origin, .ending, .options{
+        margin: 10px;
+    }.options{
+        display: grid;
+        grid-template-columns: 80% 20%;
+        border: 1px solid gray;
+        padding: 5px 10px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .content{
+        display: flex;
+        flex-direction: row;
+        
+        flex-wrap: wrap;
+        justify-content: center;
+
+    }
+    .origin, .ending, .options{
+        margin: 10px;
+    }.options{
+        display: grid;
+        grid-template-columns: 80% 20%;
+        border: 1px solid gray;
+        padding: 5px 10px;
+    }
+}
